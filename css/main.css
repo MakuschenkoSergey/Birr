@@ -1,0 +1,62 @@
+*{
+	margin: 0 auto;
+	padding: 0;
+}
+#map{
+	background: rgba(222,242,255,1);
+background: -moz-radial-gradient(center, ellipse cover, rgba(222,242,255,1) 0%, rgba(222,242,255,1) 15%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 100%);
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(222,242,255,1)), color-stop(15%, rgba(222,242,255,1)), color-stop(71%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+background: -webkit-radial-gradient(center, ellipse cover, rgba(222,242,255,1) 0%, rgba(222,242,255,1) 15%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 100%);
+background: -o-radial-gradient(center, ellipse cover, rgba(222,242,255,1) 0%, rgba(222,242,255,1) 15%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 100%);
+background: -ms-radial-gradient(center, ellipse cover, rgba(222,242,255,1) 0%, rgba(222,242,255,1) 15%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 100%);
+background: radial-gradient(ellipse at center, rgba(222,242,255,1) 0%, rgba(222,242,255,1) 15%, rgba(255,255,255,1) 71%, rgba(255,255,255,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#def2ff', endColorstr='#ffffff', GradientType=1 );
+}
+#regions{
+	fill: #22C3F2;
+    stroke: #fff;
+    stroke-width: 5px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+     -webkit-transition: all 0.2s ease-out 0.5s;
+     -moz-transition: all 0.2s ease-out 0.5s;
+     -o-transition: all 0.2s ease-out 0.5s;
+     transition: all 0.2s ease-out 0.5s;
+}
+#regions:hover {
+    fill: #EDC525;
+}
+.svg-wraper{
+	margin: auto;
+	height: auto;
+	width: 80%;
+}
+#regions{
+	stroke: #fff;
+	stroke-width: 2px;	
+}
+.reegional{
+	position: relative;
+}
+.card{
+	visibility: hidden;
+	top: 50%;
+	left: 50%;
+	width: 150px;
+	height: 300px;
+	position: absolute;
+	background-color: #fff;
+}
+.card::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+}
+.card:hover #regions{
+	visibility: visible;
+}
